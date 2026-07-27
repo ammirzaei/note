@@ -1,4 +1,4 @@
-
+// Variables
 const key = "notes";
 
 const form = document.getElementById('form-note');
@@ -8,16 +8,17 @@ const imgEmpty = document.querySelector('.img-empty');
 const statusNote = document.querySelector('#status-note');
 const listNotes = document.getElementById("list-notes");
 
+// Run my Events
 myEvents();
 
-
+// Events
 function myEvents() {
     form.addEventListener('submit', addNote);
     window.addEventListener('load', initialNotes);
     listNotes.addEventListener('click', removeNote);
 }
 
-
+// Functions
 function addNote(e) {
     e.preventDefault();
 
