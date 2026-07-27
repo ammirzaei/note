@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دفترچه یادداشت</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <div class="count-notes">
+        <span id="count"> 0 </span>
+      </div>
+      <h1>دفترچه یادداشت</h1>
+      <img
+        src="assets/img/post-it.png"
+        alt="دفترچه یادداشت"
+        class="img-notes"
+      />
+    </header>
+    <main>
+      <section class="list-notes">
+        <ul class="ul-notes" id="list-notes">
+          <!-- <li class="note">
+                    <span id="note">تست عنوان</span>
+                    <i class="fa fa-2x fa-trash" id="remove-note"></i>
+                </li> -->
+            <img src="assets/img/empty.jpg" alt="یادداشتی نداری" class="img-empty">
+        </ul>
+      </section>
+      <section class="add-notes">
+        <form action="#" id="form-note">
+            <textarea name="note" id="note" cols="30" rows="10" placeholder="یادداشتتو اینجا وارد کن..."></textarea>
+            <label for="note" id="status-note"></label>
+          <button type="submit" class="btn-add">افزودن</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>
