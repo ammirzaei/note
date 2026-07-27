@@ -5,6 +5,7 @@ const form = document.getElementById('form-note');
 const note = document.querySelector("#note");
 const count = document.getElementById("count");
 const imgEmpty = document.querySelector('.img-empty');
+const statusNote = document.querySelector('#status-note');
 
 myEvents();
 
@@ -22,11 +23,11 @@ function addNote(e) {
     if(noteValue != '') {
         addNoteToLocaleStorage(noteValue, (status) => {
             if(status) {
-
+                showStatusNotes(true);
             }
         });
     } else {
-    
+        showStatusNotes(false);
     }
 
     this.reset();
@@ -68,4 +69,21 @@ function imageEmpty(length) {
     } else {
         imgEmpty.style.display = 'block';
     }
+}
+
+function showStatusNotes(status) {
+    if(status) {
+        statusNote.innerHTML = "یادداشت اضافه شد";
+
+        statusNote.classList = "label-note-success";
+
+    } else {
+        statusNote.innerHTML = "یادداشت اضافه نشد";
+
+        statusNote.classList = "label-note-unsuccess";
+    }
+
+    setTimeout(() => {
+        statusNote.innerHTML = "";
+    }, 4000);
 }
